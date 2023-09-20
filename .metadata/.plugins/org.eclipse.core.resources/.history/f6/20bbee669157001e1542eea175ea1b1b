@@ -27,51 +27,7 @@
 <p>This document was produced by a group operating under the 5 February 2004 W3C Patent Policy. W3C maintains a public list of any patent disclosures made in connection with the deliverables of the group; that page also includes instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains Essential Claim(s) must disclose the information in accordance with section 6 of the W3C Patent Policy.</p>
 
 <h3><font color="#005A9C">Table of contents</font></h3>
-<ol>
-	<li>Introduction</li>
-	<li>Basic Templates</li>
-	<li>The HTML and XHTML Syntax</li>
-		<ol>
-			<li>Syntactic Overview</li>
-			<li>The Syntax</li>
-				<ol>
-					<li>DOCTYPE Declaration</li>
-						<ol>
-							<li>Obsolete But Permitted DOCTYPEs</li>
-							<li>HTML and XHTML Comparison</li>
-							<li>Historical Notes</li>
-						</ol>
-					<li>Elements</li>
-						<ol>
-							<li>Tags</li>
-							<li>Void Elements</li>
-							<li>Raw Text Elements</li>
-							<li>RCDATA Elements</li>
-							<li>Foreign Elements</li>
-							<li>Normal Elements</li>
-							<li>Element Type Comparision</li>
-							<li>HTML and XHTML Comparison</li>
-						</ol>
-					<li>Attributes</li>
-						<ol>
-							<li>Empty Attribute Syntax</li>
-							<li>Unquoted Attribute Value Syntax</li>
-							<li>Double-Quoted Attribute Value Syntax</li>
-							<li>Single-Quoted Attribute Value Syntax</li>
-							<li>HTML and XHTML Comparison</li>
-						</ol>
-					<li>Comments</li>
-					<li>Text</li>
-					<li>CDATA Sections</li>
-					<li>Character References</li>
-				</ol>
-			<li>Understanding MIME Types</li>
-			<li>Character Encoding</li>
-			<li>Choosing HTML or XHTML</li>
-			<li>Polyglot Documents</li>
-		</ol>
-	<li>The HTML Vocabulary and APIs</li>
-</ol>
+
 
 
 

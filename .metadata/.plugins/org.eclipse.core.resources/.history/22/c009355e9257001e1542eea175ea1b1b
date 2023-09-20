@@ -36,30 +36,8 @@
 			<li>The Syntax</li>
 				<ol>
 					<li>DOCTYPE Declaration</li>
-						<ol>
-							<li>Obsolete But Permitted DOCTYPEs</li>
-							<li>HTML and XHTML Comparison</li>
-							<li>Historical Notes</li>
-						</ol>
 					<li>Elements</li>
-						<ol>
-							<li>Tags</li>
-							<li>Void Elements</li>
-							<li>Raw Text Elements</li>
-							<li>RCDATA Elements</li>
-							<li>Foreign Elements</li>
-							<li>Normal Elements</li>
-							<li>Element Type Comparision</li>
-							<li>HTML and XHTML Comparison</li>
-						</ol>
 					<li>Attributes</li>
-						<ol>
-							<li>Empty Attribute Syntax</li>
-							<li>Unquoted Attribute Value Syntax</li>
-							<li>Double-Quoted Attribute Value Syntax</li>
-							<li>Single-Quoted Attribute Value Syntax</li>
-							<li>HTML and XHTML Comparison</li>
-						</ol>
 					<li>Comments</li>
 					<li>Text</li>
 					<li>CDATA Sections</li>
