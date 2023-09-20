@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		인라인 태그 vs 블럭 태그
+		- 모든 태그는 위의 두 분류 중 하나에 속한다
+		- 랜더링(Rendering, 태그를 화면에 출력하는 작업)
+		
+		
+	
+	-->
+	<h1>제목입니다.</h1>
+
+
+</body>
+</html>

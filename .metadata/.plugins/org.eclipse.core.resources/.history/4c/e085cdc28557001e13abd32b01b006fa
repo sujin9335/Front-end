@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		이미지, Image
+		- <img>
+		- 단독태그
+		
+		1. img.src
+			- source
+			- 이미지 파일 URL
+		
+		2. img.alt
+		
+		3. img.width
+		
+		4. img.height
+	
+	
+	-->
+
+	<h1>이미지</h1>
+	
+	<img src="images/ramg.jpg" alt="문자열">
+	
+	<img src="images/a1.png">
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

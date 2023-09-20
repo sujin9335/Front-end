@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+		
+		HTML > 골격 구성 + 데이터 표현 + 서식 기능(절대 사용 안함)
+	
+	-->
+	
+	<font size="7" color="blue">안녕하세요.</font>
+	<br>
+	안녕하세요.
+	
+	
+	
+</body>
+</html>
