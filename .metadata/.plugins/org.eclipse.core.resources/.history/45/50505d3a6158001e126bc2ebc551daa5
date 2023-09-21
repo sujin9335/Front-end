@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>즐겨찾기 모음</h1>
+	<h2>쇼핑몰</h2>
+		<ul>
+			<li href=""><u>Amazon</u></li>
+			<li href=""><u>ebay</u></li>
+			<li href=""><u>Best Buy</u></li>
+			<li href=""><u>Target</u></li>
+			<li href=""><u>Walmart</u></li>
+		</ul>
+	<h2>프로그래밍</h2>
+		<ul>
+			<li href=""><u>Python</u></li>
+			<li href=""><u>Java</u></li>
+			<li href=""><u>PHP</u></li>
+			<li href=""><u>Perl</u></li>
+			<li href=""><u>Ruby</u></li>
+		</ul>
+	<h2>동영상</h2>
+		<ul>
+			<li href=""><u></li>
+			<li href=""></li>
+			<li href=""></li>
+			<li href=""></li>
+			<li href=""></li>
+		</ul>
+
+</body>
+</html>

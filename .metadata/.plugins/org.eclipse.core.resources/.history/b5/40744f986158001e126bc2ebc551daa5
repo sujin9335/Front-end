@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>즐겨찾기 모음</h1>
+	<h2>쇼핑몰</h2>
+		<ul>
+			<li><a href="http://www.amazon.com"><u>Amazon</u></a> </li>
+			<li><a href="http://www.ebay.com "><u>ebay</u></a></li>
+			<li><a href="http://www.bestbuy.com "><u>Best Buy</u></a></li>
+			<li><a href="http://www.target.com "><u>Target</u></a></li>
+			<li><a href="http://www.walmart.com "><u>Walmart</u></a></li>
+		</ul>
+	<h2>프로그래밍</h2>
+		<ul>
+			<li><a href="http://www.python.org "><u>Python</u></a></li>
+			<li><a href="http://www.java.com "><u>Java</u></a></li>
+			<li><a href="http://www.php.net"><u>PHP</u></a></li>
+			<li><a href="http://www.perl.org"><u>Perl</u></a></li>
+			<li><a href="http://www.ruby-lang.org"><u>Ruby</u></a></li>
+		</ul>
+	<h2>동영상</h2>
+		<ul>
+			<li><a href="http://www.youtube.com "><u>YouTube</u></a></li>
+			<li><a href="http://www.vimeo.com "><u>Vimeo</u></a></li>
+			<li><a href="http://www.dailymotion.com "><u>Dailymotion</u></a></li>
+			<li><a href="http://www.metacafe.com"><u>MetaCafe</u></a></li>
+			<li><a href="http://www.veoh.com"><u>Veoh</u></a></li>
+		</ul>
+
+</body>
+</html>

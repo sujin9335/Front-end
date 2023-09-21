@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>HTML 5</h1>
+
+	<form method="POST" action="ex18_server.jsp">
+	
+		<input type="submit" value="전송하기">
+		<hr>
+		
+				
+		범위: <input type="range"
+				onchange="document.getElementById('txt1').value=this.value;">
+		<br>
+		<input type="text" id="txt1" size="10">
+		
+		
+		<hr>
+		
+		나이: <input type="number" min="0" max="100" step="10"> <!-- 숫자만 쓸수있음 -->
+		
+		
+		<hr>
+		
+		
+		전화번호: <input type="tel"><!-- 폰으로 볼때 자판이 숫자패드로보임 -->
+		
+		
+		<hr>
+		
+		
+		URL: <input type="url"><!-- 유효성검사 -->
+		
+		
+		
+		<hr>
+		
+		
+		이메일: <input type="email"> <!-- @있는지 유효성검사 -->
+		
+		
+		
+		<hr>
+	
+		<h3>로그인(필수 입력)</h3>
+		아이디: <input type="text" required value="aaa"><br>
+		암호: <input type="password" required value="111"><br>
+		<input type="submit" value="로그인">
+		
+		<hr>
+	
+		
+		<input type="text" 
+			value="이름을 입력하시오."
+			onfocus="this.value='';"><!-- 완벽하지 않음 -->
+			
+			
+		<hr>
+		
+		<!-- placeholder: 입력칸에 흐릿하게 보이는것 -->
+		<input type="text" placeholder="이름을 입력하시오">
+		<br>
+		<input type="password" placeholder="암호 입력">
+		<br>
+		<textarea cols="40" rows="5" placeholder="자기소개"></textarea>
+		
+		<hr>
+		
+		
+	
+	</form>
+
+
+
+
+</body>
+</html>

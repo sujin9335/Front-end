@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>즐겨찾기 모음</h1>
+	<h2>쇼핑몰</h2>
+		<ul>
+			<li><a href="http://www.amazon.com Amazon"><u>Amazon</u></a> </li>
+			<li href="http://www.ebay.com eBay"><u>ebay</u></li>
+			<li href="http://www.bestbuy.com Best Buy"><u>Best Buy</u></li>
+			<li href="http://www.target.com Target"><u>Target</u></li>
+			<li href="http://www.walmart.com Walmart"><u>Walmart</u></li>
+		</ul>
+	<h2>프로그래밍</h2>
+		<ul>
+			<li href="http://www.python.org Python"><u>Python</u></li>
+			<li href="http://www.java.com Java"><u>Java</u></li>
+			<li href="http://www.php.net PHP"><u>PHP</u></li>
+			<li href="http://www.perl.org Perl"><u>Perl</u></li>
+			<li href="http://www.ruby-lang.org Ruby"><u>Ruby</u></li>
+		</ul>
+	<h2>동영상</h2>
+		<ul>
+			<li href="http://www.youtube.com YouTube"><u>YouTube</u></li>
+			<li href="http://www.vimeo.com Vimeo"><u>Vimeo</u></li>
+			<li href="http://www.dailymotion.com Dailymotion"><u>Dailymotion</u></li>
+			<li href="http://www.metacafe.com MetaCafe"><u>MetaCafe</u></li>
+			<li href="http://www.veoh.com Veoh"><u>Veoh</u></li>
+		</ul>
+
+</body>
+</html>

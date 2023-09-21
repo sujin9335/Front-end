@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		테이블 작업
+		1. 기본 작업(table, tr, td)
+		2. 데이터 작성
+		3. 크기
+	
+	
+	
+	-->
+
+
+
+	<h1>주소록</h1>
+	
+	<table border="1" width="600">
+		
+		<!-- 테이블 헤더 -->
+		<tr>
+			<td>번호</td>
+			<td>이름</td>
+			<td>나이</td>
+			<td>성별</td>
+			<td>주소</td>
+		</tr>
+		
+		<!-- 테이블 본문(데이터) -->
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>20</td>
+			<td>남</td>
+			<td>서울시 강남구 역삼동 00아파트 100동 2045호</td> <!-- 내용이늘면 나머지 가로로td가 줄어듬 -->
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>김철수</td>
+			<td>26</td>
+			<td>남</td>
+			<td>서울시 성동구</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>최영희</td>
+			<td>31</td>
+			<td>여</td>
+			<td>서울시 동작구</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>20</td>
+			<td>남</td>
+			<td>서울시 강남구</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>김철수</td>
+			<td>26</td>
+			<td>남</td>
+			<td>서울시 성동구</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>최영희</td>
+			<td>31</td>
+			<td>여</td>
+			<td>서울시 동작구</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>20</td>
+			<td>남</td>
+			<td>서울시 강남구</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>김철수</td>
+			<td>26</td>
+			<td>남</td>
+			<td>서울시 성동구</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>최영희</td>
+			<td>31</td>
+			<td>여</td>
+			<td>서울시 동작구</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>20</td>
+			<td>남</td>
+			<td>서울시 강남구</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>김철수</td>
+			<td>26</td>
+			<td>남</td>
+			<td>서울시 성동구</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>최영희</td>
+			<td>31</td>
+			<td>여</td>
+			<td>서울시 동작구</td>
+		</tr>
+		
+		
+	</table>
+	
+	
+
+
+
+</body>
+</html>

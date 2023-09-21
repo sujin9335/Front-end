@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1 align="center"><b>교 육 훈 련 일 지</b></h1>
+
+<table width="800" height="100">
+	<tr>
+		<td>교육기관 : 서울 고용 노동부 / 쌍용 교육 센터</td>
+		<td width="240" rowspan="3">
+			<table border>
+				<tr height="30">
+					<td width="80" align="center">담 당</td>
+					<td width="80" align="center">팀 장</td>
+					<td width="80" align="center">단 장</td>
+				</tr>
+				<tr height="60">
+					<td></td>
+					<td align="center"><b>전 결</b></td>
+					<td></td>
+				</tr>							
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>교육과정 : Java 기반 임베디드 플랫폼 연동 융합 개발자 양성 과정</td>
+	</tr>
+	<tr>
+		<td>교육일자 : 2023년&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;월&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;요일</td>
+	</tr>
+</table>
+<br>
+<table border="1" width="800" height="40">
+	<tr>
+		<td width="80" align="center">재적</td>
+		<td width="80" ></td>
+		<td width="80" align="center">출석</td>
+		<td width="80"></td>
+		<td width="80" align="center">결석</td>
+		<td width="80"></td>
+		<td width="80" align="center">지각</td>
+		<td width="80"></td>
+		<td width="80" align="center">조퇴</td>
+		<td width="80"></td>
+	</tr>
+</table>
+<br>
+<table border="1" width="800" >
+	<tr height="40">
+		<td align="center" colspan="10"></td>
+	</tr>
+	<tr height="40">
+		<td align="center"></td>
+		<td align="center" colspan="2"></td>
+		<td align="center"></td>
+		<td align="center">colspan="6"></td>
+	</tr>
+	<tr height="40">
+		<td align="center"></td>
+		<td align="center"></td>
+		<td align="center"></td>
+		<td align="center"></td>
+		<td align="center"></td>
+		<td align="center"></td>
+		<td align="center"></td>
+		<td align="center"></td>
+		<td align="center"></td>
+		<td align="center"></td>
+	</tr>
+	
+	
+</table>
+
+</body>
+</html>
