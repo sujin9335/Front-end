@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 특정 태그를 찾는 선택자가 N개 이상 선언할 수 있다 */
+        /* div { color: red; }
+        div { font-style: italic; } */
+
+        /* 코드 관리상 위에를 아래처럼 작성 하는게 좋다 */
+        /* div { 
+            color: red;
+            font-style: italic;
+        } */
+
+        
+        /* 동일한 태그를 선택한 식별자들이 > 동일한 속성을 지정 > 충돌발생
+        > 작성된 순서에 따라 마지막에 작성한 속성이 적용(덮어쓰기) */
+        /* div { color: red; }
+        div { color: blue; } */
+
+
+        /* 선택자 우선순위 */
+        /* #box1 { color: orange; }
+        .box{ color: blue; }
+        div { color: red; } */
+
+
+        body > div { color: blue; } /* 태그 2개쓰여서 2점 */
+        div { color: red; } /* 1점 */
+
+        div#box1.box { }
+
+        div + div { }
+
+        .one { }
+
+        .box.one { } /* class="box one" 클래스 2개쓰는 것 찾기 */
+
+
+        /* (0,1,0) */
+        .t1 {color: blue;}
+
+        /* (0,0,11) */
+        div > div > div > div > div > div > div > div > div > div > div { color: red;}
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- 
+
+        1. 선택자 충돌
+        2. 속성 충돌
+        3. 선택자 우선순위
+            - 속성 충돌이 발생하면 선택자간의 우선 순위에 따라 속성이
+                적용된다
+            - 점수 계산 > 높은 점수의 선택자가 적용
+
+        선택자 점수 계산(명확할수록 점수높음, 11점이된다고 더 높아지는건 아니다)
+        a. 태그 선택자 > 1점        > "사람"    > "대한민국"
+        b. 클래스 선택자 > 10점     > "남자"    > "서울 홍길동"
+        c. 아이디 선택자 > 100점    > "홍길동"  > "서울 역삼동 한독 홍길동"
+
+
+
+    -->
+
+    <div id="box1" class="box one">상자</div>
+
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>   
+                                            <div>
+                                                <div class="t1">상자</div>
+                                            </div>      
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
