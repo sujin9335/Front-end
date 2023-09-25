@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+        
+            가시성, Visibliity
+            - 요소를 화면에 보일지? 말지?
+            - 요소의 원래 영역은 그
+        
+        */
+
+        #cat1 {
+            visibility: visible;
+        }
+
+        #cat2 {
+            visibility: visible;
+        }
+
+
+        /* hover : 마우스가 올라가면 동작 */
+        /* 호버를 달고 위에 visible을 하면 안됨 */
+        /* #cat1:hover {
+            visibility: hidden;
+        } */
+
+        /* cat2(+ 는 마지막)를 선택해서 변경 */
+        /* #cat1:hover + #cat2 { 
+            visibility: hidden;
+        } */
+
+        /* ~ img : cat1 이후 이미지들 */
+        /* #cat1:hover ~ img {
+            visibility: hidden;
+        } */
+
+        #box {
+            border: 1px solid black;
+            padding:  30px;
+        }
+
+        /* #box:hover > img {
+            visibility: hidden;
+        } */
+
+        #cat1, #cat2, #cat3 {
+            visibility: visible;
+        }
+
+        #box:hover > img {
+            visibility: hidden;
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    
+
+    <div id="box">
+        <img src="../asset/images/catty01.png" id="cat1" alt="">
+        <img src="../asset/images/catty02.png" id="cat2" alt="">
+        <img src="../asset/images/catty03.png" id="cat3" alt="">
+    </div>
+
+
+</body>
+</html>

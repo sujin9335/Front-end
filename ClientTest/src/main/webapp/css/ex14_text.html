@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100&display=swap');
+
+        @font-face {
+            font-family: 'LOTTERIACHAB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }   
+
+        .txt {
+            /* background: yellow; */
+
+            /* 텍스트 색상, 전경색(Fore Color) */
+            color: #444444; /* #333333 ~ #555555 눈이 편하게 읽을만한 회색 */
+
+            /* 텍스트 정렬(수평 정렬) */
+            text-align: left;
+
+            /* 텍스트 크기 (기본값: 12pt, 16px) */
+            /* font-size: 12pt; */
+            /* font-size: 16px; */
+            /* font-size: 1pt; */
+            /* font-size: 2em; */
+
+            /* font-size: 2rem; */
+
+            /*
+                HTML 수치 표현법
+                1. 숫자(px, 문자수, 셀병합 크기)
+                2. 백분율(%)
+
+                BUT CSS는 단위가 좀 많다!!!
+
+                CSS 수치 표현법
+                - 수치데이터는 반드시(***) 단위 표기를 해야 한다.(생략 불가능 > 동작 안함)
+                1. pt: 포인트(글꼴), 절대값, 1/72인치
+                2. px: 픽셀(모든 분야, 크기, 여백, 위치, 글꼴 등), 절대값
+                3. em: 기본 글꼴 크기를 기준으로 하는 상대 크기(%). 알파벳 대문자(M)의 높이를 100%으로 하는 상대 크기. 상대값. 상속 받음. 부모 글꼴 크기를 100%으로 하는 상대 크기.
+                4. rem: 기본 글꼴 크기를 기준으로 하는 상대 크기(%). 알파벳 대문자(M)의 높이를 100%으로 하는 상대 크기. 상대값. 상속 안 받음. 부모와 상관없이 브라우저의 기본 글꼴 크기를 100%으로 하는 상대 크기.
+                10. %: 백분율(크기, 여백, 위치, 정렬 등..). 상대값. 부모의 크기를 기준으로 하는 상대값.
+                ----------------------이 위로는 꼭 기억! 아래는 잊어버려도...뭐..
+                5. ex: 알파벳 소문자 x의 높이를 100%으로 하는 상대 크기
+                6. mm: 밀리미터
+                7. cm: 센티미터
+                8. in: 인치
+                9. pc: 파이카(12pt)
+                11. 기타 등등..
+
+
+            */
+
+            /*
+
+                줄간격
+                - line-height
+                - %, em(rem), px
+                - 1.4rem ~ 1.8rem
+
+            */
+
+            line-height: 1.5rem;
+            /* 1을 주면 간격이 사라짐. 1보다 작으면 글자가 겹치고 0을 넣으면 모든 글자가 1줄에 나옴. */
+
+            /* 스타일(normal, italic) */
+            font-style: normal;
+
+            /* 두께(normal, bold) */
+            /* font-weight: 400; */
+            font-weight: normal;
+            /* 보통 400이 normal, 900이 bold */
+
+            /* 단어 간격(스페이스 크기) */
+            word-spacing: 0rem;
+
+            /* 자간(문자 간격)) */
+            /* letter-spacing: 0rem; */
+            letter-spacing: -1px;
+
+            /* 꾸밈(기본값: none) */
+            /* text-decoration: line-through; */
+            /* text-decoration: underline; */
+            text-decoration: none;
+
+            /* 폰트(서체, 글꼴) */
+
+            /*
+                폰트
+                - 페이지 폰트는 서버측 폰트를 사용하는 것이 아니라, 브라우저가 동작 중인 클라이언트 컴퓨터의 폰트를 사용한다.(***)
+
+
+                폰트 예약어
+                - 폰트의 종류를 나타내는 용어
+                1. serif: 획끝에 장식이 있는 폰트(궁서체, 바탕체)
+                2. sans-serif: 획끝에 장식이 없는 폰트(돋움체, 고딕체)
+                3. monospace: 문자폭이 균일(궁서(X), 궁서체(O))
+                4. cursive: 장식체
+                5. fantasy: 장식체
+
+
+                웹 폰트
+                - 폰트를 서버로부터 다운로드 받아서 사용하는 기술
+                - 서핑 중인 페이지에만 적용
+                - 서비스 업체
+
+                
+            */
+
+
+            /* Mac 방식 > font-family: "굴림", Gulim, Arial, sans-serif; */
+            /* font-family: 맑은 고딕, 궁서체, 바탕체, monospace; */
+            /* font-family: 맑은 고딕, 궁서체, 바탕체, serif; */
+            /* 우선순위에 따라 나열할 수 있고, 한글 또는 띄어쓰기가 있으면 '따옴표로 묶어주기' */
+            /* font-family:Georgia, 'Times New Roman', Times, serif; */
+            
+            /* font-family: 'IBM Plex Sans KR', sans-serif; */
+            font-family: 'LOTTERIACHAB';
+        
+
+        }
+
+        p {
+            /* 들여 쓰기 */
+            text-indent: 1rem;
+        }
+
+
+
+        .txt span {
+            /* background-color: yellow; */
+            /* font-size: 16px; */
+            /* 부모 크기의 2배 > 상속 받음 */
+            /* font-size: 2em; */
+            font-size: 2rem;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex14_text.html -->
+
+    <h1>텍스트 관련 속성</h1>
+
+    <p>제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여 국회재적의원 과반수의 찬성이 있어야 한다. 정당은 그 목적·조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다. 국회는 국민의 보통·평등·직접·비밀선거에 의하여 선출된 국회의원으로 구성한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 국회는 법률에 저촉되지 아니하는 범위안에서 의사와 내부규율에 관한 규칙을 제정할 수 있다. 이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다. 계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.</p>
+
+    <p class="txt">모든 국민은 학문과 예술의 자유를 가진다. 국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다. 공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 누구든지 체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지 아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의 가족등 법률이 정하는 자에게는 그 이유와 일시·장소가 지체없이 통지되어야 한다. <span>대통령은 제4항과 제5항의 규정에 의하여 확정된 법률을 지체없이 공포하여야 한다.</span> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포한다.</p>
+        
+    <p>정당은 법률이 정하는 바에 의하여 국가의 보호를 받으며, 국가는 법률이 정하는 바에 의하여 정당운영에 필요한 자금을 보조할 수 있다. 국가는 균형있는 국민경제의 성장 및 안정과 적정한 소득의 분배를 유지하고, 시장의 지배와 경제력의 남용을 방지하며, 경제주체간의 조화를 통한 경제의 민주화를 위하여 경제에 관한 규제와 조정을 할 수 있다. 모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다. 대한민국의 국민이 되는 요건은 법률로 정한다. 제1항의 탄핵소추는 국회재적의원 3분의 1 이상의 발의가 있어야 하며, 그 의결은 국회재적의원 과반수의 찬성이 있어야 한다. 다만, 대통령에 대한 탄핵소추는 국회재적의원 과반수의 발의와 국회재적의원 3분의 2 이상의 찬성이 있어야 한다.</p>
+    
+    <hr>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi mollitia fugiat numquam explicabo? Aperiam tempore reiciendis nobis ratione deleniti exercitationem veritatis, illum explicabo. Tempore dolorum non nostrum esse alias quod quibusdam odit quidem. Veniam ipsum nobis repellendus fugiat culpa tempora sapiente nemo delectus eum similique asperiores, fuga ut saepe. Reiciendis hic in eaque accusantium blanditiis earum delectus, temporibus fuga odio optio aliquid qui iste assumenda nesciunt voluptate saepe minima ratione perspiciatis omnis ad. Quibusdam magni, sint itaque corporis explicabo doloribus. Natus repellendus vitae ratione voluptatibus aspernatur porro quis dolorem totam quod odio atque eius quidem numquam, sint id labore doloremque!</p>
+
+    <p class="txt">Asperiores vero architecto at quis minus, saepe autem ducimus est aut illum dignissimos cupiditate similique quas, nemo praesentium nisi labore! Labore blanditiis quos hic? Eius, esse aperiam, hic eum numquam optio iste amet iure dolorum omnis consequuntur temporibus laborum adipisci vitae itaque perferendis? Officia quis consequuntur amet odit aliquid, voluptates temporibus natus porro? Quae quisquam hic doloribus distinctio eum alias accusantium ea eligendi laudantium corporis aspernatur, deleniti est consectetur voluptatem, aut iste accusamus cum reprehenderit sed at quaerat reiciendis? Quam eum eligendi obcaecati excepturi est reiciendis ratione accusamus esse illum nesciunt, voluptatibus magni id, velit, unde culpa fugit laboriosam iusto.</p>
+    
+    <p>Laudantium, dolorum. Mollitia beatae commodi inventore cumque incidunt. Illum omnis quas harum blanditiis pariatur nisi alias, perspiciatis accusamus fugiat necessitatibus quia consequuntur a eligendi adipisci, quam modi repellendus voluptatem! Error nam soluta similique, quo illum ratione eaque et fuga officia libero quis facilis eos veritatis, doloribus consequatur non nesciunt harum id nobis amet ullam perspiciatis voluptatibus excepturi unde. Sed suscipit maxime molestias consequuntur? Ut repellat tempore distinctio, culpa delectus illum amet nisi unde fuga illo sequi sint deleniti animi ex quo repudiandae. Quas quaerat dicta, a dolor quidem, dolorem fugit est culpa eius aliquid quo quos. Minus recusandae officia nisi.</p>
+</body>
+</html>

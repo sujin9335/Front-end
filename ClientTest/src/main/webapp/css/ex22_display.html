@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        
+            display
+            - 요소의 출력 방식 조작
+        
+        
+        */
+
+        .box {
+            border: 1px solid black;
+            display: inline;
+        }
+
+        .link {
+            border: 1px solid black;
+            display: block;
+            /* width: 100px;
+            height: 100px; */
+        }
+
+        /* ul {
+            border: 1px solid red;
+        }
+
+        li {
+            border: 1px solid blue;
+        } */
+
+        /* 목록태그를 block에서 inline-block으로 바꾸기 */
+        /* inline은 원래 크기 지정을 못해서 inline-block으로 변경 */
+        #menu li {
+            /* inline의 성질 + 크기 지정 */
+            display: inline-block;
+            /* width가 padding 또는 무언가로 인해 크기를 잡아먹어
+            한줄로 5개를 1줄로 표현하려면 20%가 아닌 더 줄여야된다*/
+            width: 16%;
+            background-color: #CCCC;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* 마우스 가져가면 변경 (hover) */
+        #menu li:hover {
+            background-color: #333;
+            color: white;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    <ul id="menu">
+        <li>메뉴</li>
+        <li>메뉴</li>
+        <li>메뉴</li>
+        <li>메뉴</li>
+        <li>메뉴</li>
+    </ul>
+
+
+
+
+
+
+    <h1>블럭 태그</h1>
+
+    <!-- div#box$.box{상자$}*3 -->
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+
+    <h1>인라인 태그</h1>
+
+    <!-- a[href=#]#link$.link{링크$}*3 -->
+    <a href="#" id="link1" class="link">링크1</a>
+    <a href="#" id="link2" class="link">링크2</a>
+    <a href="#" id="link3" class="link">링크3</a>
+
+
+</body>
+</html>
