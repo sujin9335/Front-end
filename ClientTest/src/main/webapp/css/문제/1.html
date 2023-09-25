@@ -6,6 +6,11 @@
     <title>Document</title>
     
     <style>
+
+        body>div {
+            width: 800px;
+        }
+
         table th, table td {
             color: #444444;
             font-size: 14px;
@@ -13,22 +18,21 @@
 
         h1{
             font-variant: small-caps;
-            border-bottom: 1px dashed gray;
-            font-weight: bold;
+            border-bottom: 1px dashed gray ;
+            color: #444444;
             
         }
 
-        h1>span {
-            color: #6495ED;
-        }
         
-        /* h1 #head2{
-            font-size: 17px;
-            text-align: right;
-            
-        } */
+        
+        h1 small{
+            display: block;
+            float: right;
+            font-size: .7em;
+            margin: 13px;
+        }
 
-        tr>th {
+        body {
             font-family: Verdana;
         }
 
@@ -75,7 +79,10 @@
 
 </head>
 <body>
-    <h1><span>M</span>ember list table design</h1>
+
+    <div>
+
+    <h1><span style="color: #6495ED;">M</span>ember list <small>Table Design</small></h1>
 
 
     <table id="list" class="table">
@@ -161,6 +168,6 @@
 
 
 
-
+    </div>  
 </body>
 </html>
