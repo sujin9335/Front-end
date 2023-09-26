@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            margin: 50px;
+
+            /* 
+
+                모서리 둥글기
+                - border-radius
+                - px, %
+                - width, height(단축) 1/2 = 최댓값
+            
+            */
+
+            /* 300이라 150이 최대 */
+            border-radius: 150px;
+
+            /* %는 타원모양이 나옴(box의 가로 세로 길이 비율에 맞는 원을그림) */
+            border-radius: 50%;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quis, repellendus illo deserunt facilis incidunt provident error. Officiis nobis ipsa rerum, sit non excepturi magnam commodi incidunt dolor unde adipisci?</div>
+
+</body>
+</html>
