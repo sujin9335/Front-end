@@ -1,0 +1,60 @@
+body {
+    /* border: 1px solid black; */
+    padding-bottom: 500px;
+}
+
+
+
+#box {
+    border: 10px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    margin: 100px;
+    /* transition-property: width, height, background-color; */
+    transition-property: all;
+    transition-duration: 1s;
+
+    /* font-family: 맑은고딕; */
+    
+    overflow: hidden;
+}
+
+body:hover #box {
+
+    /* 
+    
+        Transition, 전환
+        - 객체의 속성(상태)값이 변화되는 과정을 시간 순서대로 보여주는 속성
+        - 수치형 속성에만 적용 가능(숫자, 색상)
+    
+    */
+    /* width: 600px; */
+    /* height: 400px; */
+    /* background-color: tomato; */
+    /* font-size: 10rem; */
+    
+    /* 투명 */
+    /* opacity: 0; */
+
+    /* border-radius: 50%; */
+    /* box-shadow: 10px 10px 10px #555; */
+    /* margin-left: 300px; */
+    /* border-width: 50px; */
+
+    /* transform: translate(100px, 100px); */
+    /* transform: scale(-1, 1); */
+    transform: rotate(360deg);
+
+
+
+
+    /* font-family: '궁서체'; */
+
+}
+
+
+
+
+
+

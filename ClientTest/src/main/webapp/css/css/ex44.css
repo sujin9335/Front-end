@@ -1,0 +1,63 @@
+
+/* ex46_transition 적용 */
+#main-menu>img, #side-menu>img, #footer-menu>img {
+    transition-property: transform;
+    transition-duration: .7s;
+}
+
+
+
+
+#main-menu {
+    /* border: 1px solid black; */
+    font-size: 0;
+    width: 630px;
+    /* 중앙정렬 */
+    margin: 0 auto;
+    transform: translate(0px, -100px);
+}
+
+/* 메뉴전체 반응 */
+/* #main-menu:hover {
+    transform: translate(0px, -10px);
+} */
+
+/* 이미지 각각 반응 */
+#main-menu>img:hover {
+    /* trans를 img 부모인 main-menu에 줬기 때문에 값이 다름 */
+    transform: translate(0px, 90px);
+}
+
+
+#side-menu {
+    /* border: 10px solid black; */
+    font-size: 0;
+    width: 126px;
+    /* 중앙정렬 */
+    /* margin: 0 auto; */
+    transform: translate(-105px, 0px);
+}
+
+#side-menu>img:hover {
+    transform: translate(90px, 0);
+}
+
+
+#footer-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* border: 10px solid black; */
+    font-size: 0;
+    width: 630px;
+    /* 중앙정렬 */
+    margin: 0 auto;
+    transform: translate(0px, 100px);
+}
+
+#footer-menu>img:hover {
+    transform: translate(0px, -90px);
+}
+
+

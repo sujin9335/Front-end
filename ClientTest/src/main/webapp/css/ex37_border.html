@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/48055cfc68.js" crossorigin="anonymous"></script>
     <title>Document</title>
 
     <style>
@@ -22,12 +23,114 @@
             */
 
             /* 300이라 150이 최대 */
-            border-radius: 150px;
+            /* border-radius: 150px; */
 
             /* %는 타원모양이 나옴(box의 가로 세로 길이 비율에 맞는 원을그림) */
-            border-radius: 50%;
+            /* border-radius: 50%; */
+
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
 
         }
+
+
+        #cat img {
+            /* border-radius: 15px; */
+            border-radius: 50%;
+        }
+
+        body {
+            margin-bottom: 500px;
+        }
+        
+
+        #txt1{
+            border-radius: 20px;
+            border: 1px solid #777;
+            outline: none;
+            /* padding-left: 10px; */
+            padding: 5px 10px;
+        }
+
+        #search {
+            width: 245px;
+        }
+
+        #search input {
+            float: left;
+            border: 1px solid #777;
+            color: #333;
+            padding: 5px;
+            outline: none;
+        }
+
+        #search input[type=text] {
+            border-right: 0;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        #search input[type=button] {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        /* float 적용범위 이후 clear 하는법 */
+        #search:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+
+        /* 새로만들기 */
+
+        #icon {
+            /* 이미지(X), 폰트(0) 딩벳폰트*/
+            /* 온라인에서 제공하는 아이콘을 쓰면 컬러,사이즈 이점이있음 */
+            font-size: 10rem;
+            color: cornflowerblue;
+        }
+
+        #search2 {
+            width: 245px;
+        }
+
+        #search2 input, #search2 button {
+            float: left;
+            border: 1px solid #777;
+            color: #333;
+            padding: 5px;
+            outline: none;
+        }
+
+        #search2 input[type=text] {
+            border-right: 0;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        #search2 button {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #search2 button:hover {
+            background-color: #CCC;
+        }
+
+        /* float 적용범위 이후 clear 하는법 */
+        #search2:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
 
     </style>
 
@@ -35,6 +138,43 @@
 <body>
     
     <div id="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quis, repellendus illo deserunt facilis incidunt provident error. Officiis nobis ipsa rerum, sit non excepturi magnam commodi incidunt dolor unde adipisci?</div>
+
+    <hr>
+
+    <div id="cat">
+        <img src="../asset/images/cat01.jpg" alt="">
+        <img src="../asset/images/cat02.jpg" alt="">
+        <img src="../asset/images/cat03.jpg" alt="">
+        <img src="../asset/images/cat04.jpg" alt="">
+        <img src="../asset/images/cat05.jpg" alt="">
+    </div>
+
+    <hr>
+
+    <input type="text" id="txt1">
+
+    <hr>
+
+    <h1>검색</h1>
+
+    <div id="search">
+        <input type="text" placeholder="검색어를 입력하세요">
+        <input type="button" value="Search">
+    </div>
+
+    <hr>
+
+    <div id="search2">
+        <input type="text" placeholder="검색어를 입력하세요">
+        <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+
+    <hr>
+
+    <!-- 폰트어섬에서 가져온 아이콘 -->
+    <!-- <i id="icon" class="fa-solid fa-magnifying-glass"></i> -->
 
 </body>
 </html>
