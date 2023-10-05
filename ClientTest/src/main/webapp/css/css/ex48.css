@@ -42,11 +42,11 @@ body{
 }
 
 body:hover #box1 {
-    width: 500px;
+    /* width: 500px; */
 
     /* 1번 */
     /* 이거만 해서는 동작안함 2번으로 지정해줘야됨 */
-    animation-name: key1;
+    /* animation-name: key1; */
     animation-duration: 1s;
     /* 마지막에서 멈춤(마우스가 올라가있을때 동작완료후 정지) */
     animation-fill-mode: forwards;
@@ -91,7 +91,7 @@ body:hover #box1 {
 
 body:hover #box2 {
     /* 프레임 정의(움직임) */
-    /* animation-name: key2;  */
+    animation-name: key2; 
     /* 소요시간 */
     animation-duration: 1s;
     /* 처음있는곳으로 돌아가면 의미없음 */

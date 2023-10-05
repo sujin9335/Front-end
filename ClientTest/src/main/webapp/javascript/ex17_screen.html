@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        //screen 객체
+        //- window > screen
+        //- 화면 정보 제공
+
+        //현재 보고 있는 화면의 크기 > 모니터 해상도
+        console.log(window.screen.availWidth); //1920
+        console.log(window.screen.availHeight); //1040이 나오는이유: 밑에 작업표시줄(시작) 40뺀크기
+
+        console.log(window.screen.colorDepth); //24bit color
+
+        //화면 상태 정보
+        // ScreenOrientation {angle: 0, type: 'landscape-primary', onchange: null}
+        console.log(window.screen.orientation);
+
+    </script>
+
+</body>
+</html>
