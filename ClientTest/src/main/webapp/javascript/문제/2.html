@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+
+    <div>아이디:</div>
+    <form name="form1">
+        <div><input type="text" name="input1"></div>
+        <div><input type="text" name="output1"></div>
+        
+    </form>
+    
+    <script>
+
+        // alert(document.form1.input1.value.length);
+
+        document.form1.input1.onkeyup = m1;
+
+        function m1() {
+            // alert();
+            var num = document.form1.input1.value.length;
+            if(num > 1){
+                document.form1.output1.value = '짧';
+            }
+        }
+        
+
+    </script>
+
+</body>
+</html>
