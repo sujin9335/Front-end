@@ -68,6 +68,8 @@
             child는 클릭 계속해도 새로고침만됨
             공란으로 하면 새로운창 계속 생성
             */
+
+            // 자식창 띄우는 방법
             child = window.open('ex16_child.html', 'child', 'width=500 height=500 left=0 top=0');
 
 
@@ -78,7 +80,11 @@
             // window.close();//부모창이 꺼짐
 
             //자식창의 window 객체 접근?
+
             child.close(); //==window.close();
+            
+            // 메인 창이 꺼짐
+            // window.close();
 
         }
 
@@ -87,6 +93,7 @@
             //부모창 > 자식창
             //window.document.form1.ptxt1
 
+            //pbth3.onclick 을 클릭하게 되면 자식창을 변경할수있음
             child.document.form1.ctxt1.value = '부모창에서 왔습니다.';
             child.document.form1.cbtn1.value = '클릭';
 

@@ -42,11 +42,13 @@
 
         function m1() {
             // document.images['cat1'].width = 500;
+            //실행되면 이미지 src 변경
             document.images['cat1'].src = '../asset/images/cat02.jpg';
         }
 
 
         //롤오버 이미지
+        //마우스 in out 조작
         document.images['cat2'].onmouseover = m2;
         document.images['cat2'].onmouseout = m3;
 
@@ -58,7 +60,7 @@
             document.images['cat2'].src = '../asset/images/cat01.jpg';
         }
 
-
+        
 
         //이미지 토글 버튼
         document.images['sw'].onclick = m4;
@@ -68,12 +70,12 @@
             //if에 넣을조건
             // alert(document.images['sw'].src.endsWidth('switch_on.png'))
 
-            if(document.images['sw'].src.endsWith('switch_on.png')) {
-                document.images['sw'].src = '../asset/images/switch_off.png';
-                document.body.bgColor = '#000';
+            if(document.images['sw'].src.endsWith('switch_on.png')) { //src 마지막이 on이면
+                document.images['sw'].src = '../asset/images/switch_off.png'; //이미지 변경
+                document.body.bgColor = '#000'; //배경 검정
             }else {
-                document.images['sw'].src = '../asset/images/switch_on.png';
-                document.body.bgColor = '#FFF';
+                document.images['sw'].src = '../asset/images/switch_on.png'; // 이미지 off이면
+                document.body.bgColor = '#FFF'; //배경 흰색
             }
         }
 
@@ -90,7 +92,7 @@
             
             n++;
             
-            
+            //이미지 클릭 할때마다 순차적으로 이미지 변경
             document.images['icon'].src = '../asset/images/circle_icon'+ (n + '').padStart(2, '0') +'.png';
         }
 
@@ -99,10 +101,11 @@
         // document.images['viewer']
 
         //방향키 > 이미지 이동
-        //window.onkeydown = m6; //m7 때문에 주석
+        // window.onkeydown = m6; //m7 때문에 주석
 
         var no = 1;
 
+        //순환이미지
         function m6() {
             if (event.keyCode == 37) { //좌 > 이전 이미지
                 no--;

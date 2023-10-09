@@ -15,7 +15,7 @@
 
         //1. 문자열 길이
         console.log(txt.length); //프로퍼티(Property)
-
+        console.log('-------------1');
         //2. 검색
         //- indexOf()
         //- lastIndexOf()
@@ -23,11 +23,11 @@
         console.log(txt.indexOf('~', 6)); // 11
         console.log(txt.lastIndexOf('~')); // 11
         console.log(txt.lastIndexOf('~', 10)); // 5
-
+        console.log('-------------2');
         //3. 대소문자 변환
         console.log(txt.toUpperCase());
         console.log(txt.toLowerCase());
-
+        console.log('-------------3');
         //4. 추출
         console.log(txt.substring(2,8));
         console.log(txt.substring(2));
@@ -37,7 +37,7 @@
 
         console.log(txt.charAt(2)); //문자 추출
         console.log(txt.charCodeAt(2)); //문자 코드값 추출
-
+        console.log('-------------4');
         //5. 치환 함수
         //- 처음 만나는 요소인(반복X)
         //- 정규 표현식(반복O)
@@ -45,28 +45,28 @@
         console.log(txt.replace('Hong', 'Lee'))
         //전체 Hong 바꿈(옵션g=전부)
         console.log(txt.replace(/Hong/g, 'Lee'))
-
+        console.log('-------------5');
 
         //6. 공백 제거
         txt = '    하나   둘    셋      ';
         console.log('@' + txt.trim() + '@')
         console.log('@' + txt.trimLeft() + '@')
         console.log('@' + txt.trimStart() + '@')
-
+        console.log('-------------6');
         //7. 분할
         txt = '홍길동,아무개,하하하,호호호,후후후';
         console.log(txt.split(','));
-
+        console.log('-------------7');
         //8. 검색
         txt = '홍길동'
         console.log(txt.startsWith('동'));
         console.log(txt.endsWith('동'));
-
+        console.log('-------------8');
         //9. 오라클에있던 001 0채우는 것
         txt = '1';
         console.log(txt.padStart(3, '0'));
         console.log(txt.padEnd(3, 'A'));
-
+        console.log('-------------9');
         //txt를 3번
         console.log(txt.repeat(3, txt));
 

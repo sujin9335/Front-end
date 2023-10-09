@@ -56,43 +56,43 @@
 
         */    
 
-        console.log(window.document.images.length)
+        console.log(window.document.images.length) //고양이 그림 5개 + 폼태그 밑 img 1개
         console.log(window.document.images[0].src)
-        
+        console.log('-------------1');
         for(var i=0; i<5; i++){
             console.log(window.document.images[i].src)
         }
+        console.log('-------------2');
+        // console.clear();
         
-        console.clear();
-        
-        console.log(document.links.length);
-        
+        console.log(document.links.length); //링크3개 + 앵커 2개 + 폼 1개
+        console.log('-------------3');
         for(var i=0; i<3; i++){
             console.log(window.document.links[i].href)
         }
-
+        console.log('-------------4');
         
         console.log(document.anchors.length);
 
         console.log(document.forms.length);
+        console.log('-------------5');
 
 
-
-        // document.form1.txt1.value = '테스트'; //오류 나옴
+        // document.forms.txt1.value = '테스트'; // 어디 폼태그인지 정확히 안쓰면 오류 나옴
         document.forms[0].txt1.value = '테스트';
 
 
         console.log(document.forms[0].elements.length);
         //img,a 태그는 인식이 안됨 : Bom 구조에서 form 자식이 아님
         console.log(document.forms[1].elements.length);
-
+        console.log('-------------6');
 
         console.log(document.all.length);
         
-        console.log(document.all[0]);
-        console.log(document.all[1]);
+        console.log(document.all[0]); //html
+        console.log(document.all[1]); //head
         console.log(document.all[2]);
-
+        console.log('-------------7');
 
 
         // document.images[0].width = 200; //추천
@@ -101,13 +101,13 @@
 
         // document.links[1].target = '_blank';
         // document.links.link2.target = '_blank';
-        document.links['link2'].target = '_blank';
+        document.links['link2'].target = '_blank'; //_blank == 새창으로띄우기
 
 
         // 선호도
         document.forms[0].txt1.value = '111';   //1
         document.all.txt1.value = '222';        //3
-        document.all[txt1].value = '333';       //2
+        document.all['txt1'].value = '333';       //2
         
 
 

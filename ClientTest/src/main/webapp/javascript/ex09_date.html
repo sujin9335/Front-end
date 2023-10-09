@@ -21,6 +21,7 @@
         console.log(now);
         console.log(now.toString());
         console.log(typeof now); //object
+        console.log('-------------1');
 
         //요소 추출
         //- c.get(Calendar.YEAR)
@@ -33,6 +34,7 @@
         console.log(now.getSeconds() );     //19
         console.log(now.getMilliseconds() );//0.804초
         console.log(now.getTime() );        //틱(ms)
+        console.log('-------------2');
 
 
 
@@ -41,7 +43,7 @@
         console.log(now.toLocaleString()); //2023.10.5.오전 10:22:03
         console.log(now.toLocaleDateString()) //2023. 10. 5
         console.log(now.toLocaleTimeString()) //오전 10:22:03
-
+        console.log('-------------3');
 
         //특정 시각 만들기
         var christmas = new Date();
@@ -54,11 +56,11 @@
         christmas.setSeconds(0);
 
         console.log(christmas.toString());
-
+        console.log('-------------4');
         //한번에 만들기
         // var birthday = new Date(1995, 10, 10);
         var birthday = new Date(1995, 10, 10, 12, 30, 0);
-
+        console.log('-------------5');
 
         //연산
         //시각 - 시각
@@ -67,7 +69,7 @@
         console.log((christmas - now) /1000/60/60/24); //크리스마스 남은 일
         
         console.log((now-birthday) /1000/60/60/24);
-
+        console.log('-------------6');
 
 
         //시각 + 시간
@@ -79,7 +81,7 @@
         ani.setTime(now.getTime() + (100 * 24 * 60 * 60 * 1000))
 
         console.log(ani.toLocaleString());
-
+        console.log('-------------7');
 
 
 
