@@ -21,6 +21,7 @@
 
         var rb = document.all.rb;
 
+        //모든 rb 배열 체크(onchage)되면 m1 실행
         for(var i=0; i<rb.length; i++){
             rb[i].onchange = m1;
         }
@@ -29,6 +30,7 @@
             //value 값 가져오기
             // alert(event.target.value);
 
+            //검을색일경우 글자색 흰색변경
             if(event.target.value == 'black') {
                 document.body.bgColor = event.target.value;
                 document.body.text = 'white';

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        div > input {
+            width: 250px;
+            height: 250px;
+            font-size: 200px;
+            text-align: center;
+        }
+
+    </style>
+
+<body>
+    
+    <div><input type="text" value="10"></div>
+
+    <script>
+        
+       
+
+        
+
+        var count=9;
+        var num = setInterval(f1, 1000);
+        function f1() {
+            // alert(document.getElementsByTagName('input')[0].value);
+            
+            if(count >= 0 ){
+                document.getElementsByTagName('input')[0].value = count;
+                count--;
+            }else{
+                window.location.href = "https://google.com";
+            }
+        }
+
+        window.onkeydown = m1;
+        function m1() { // esc = 27번
+            // console.log(event.keyCode);
+            if(event.keyCode == 27){
+                clearInterval(num);
+                document.body.bgColor = 'tomato';
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

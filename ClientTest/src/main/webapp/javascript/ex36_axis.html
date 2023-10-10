@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .table {
+            border: 1xp, solid, black;
+            border-collapse: collapse;
+        }
+        .table td{
+            border: 1px solid black;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+
+
+    </style>
+
+
+</head>
+
+<!-- 블럭잡기 막아주는거 -->
+<body oncontextmenu="return false;" onselectstart="return false">
+
+    <h1>테이블</h1>
+    <table class="table" id="tbl1">
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+
+
+    <h1>또 다른 테이블</h1>
+    <table class="table" id="tbl2">
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+
+    </table>
+
+
+
+    <script>
+
+        // var list = document.getElementsByTagName('td');
+        // alert(list.length);
+
+        
+        var tbl1 = document.getElementById('tbl1');
+
+
+        //<table> > <tbody> : 테이블의 자식인 티바디는 숨어있다
+        // alert(tbl1.children.length);//1개
+        
+        var tr=tbl1.firstElementChild.children;
+
+        for(var i=0; i<tr.length; i++){
+            var td = tr[i].children;
+            for(var j=0; j<td.length; j++){
+                // td[j].bgColor='gold';
+                // td[j].onmouseover = m1;
+                // td[j].onmouseout = m2;
+                td[j].onmousedown = m3;
+                
+            }
+        }
+
+        function m1() {
+            event.target.bgColor = 'gold';
+        }
+        
+        function m2() {
+            event.target.bgColor = 'transparent';
+        }
+
+        function m3() {// 좌클릭 숫자증가, 우클릭 숫자삼소
+            var n = parseInt(event.target.textContent);
+
+            if(event.buttons == 1){
+                n++
+            }else if(event.buttons == 2){
+                n--;
+            }else if(event.buttons == 4){
+                n = 0;
+            }
+
+            event.target.textContent = n;
+        }
+        
+
+
+        //tbl2 파란색 색칠
+        // var tbl2 = document.getElementById('tbl2');
+        var list2 = document.querySelectorAll('#tbl2 td');
+
+        // alert(list2.length);
+
+        for(var i=0; i<list2.length; i++){
+            list2[i].bgColor = 'cornflowerblue';
+        }
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

@@ -83,7 +83,7 @@
             //- 필수값
             //- 2~5자 이내
             //- 한글만
-            if(txtname.value == '') {
+            if(txtname.value == '') {//textname 이 비었을 때
                 alert('이름을 입력하세요');
 
                 //커서가 해당 위치에 있음
@@ -138,7 +138,7 @@
 
             if(!regex.test(txtid.value)) {
                 alert('아이디가 올바르지 않습니다');
-                txtid.select();
+                txtid.select();//아이디 드래그
                 return;
             }
 
