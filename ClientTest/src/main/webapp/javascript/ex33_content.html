@@ -91,6 +91,7 @@
 
 
             //좌클릭 우클릭 그림 다르게
+            //event.buttons: 마우스 버튼 출력번호
             var n = 0;
             if(event.buttons == 1){
                 n = 1;
@@ -101,8 +102,11 @@
             }
             event.target.innerHTML = '<img src="../asset/images/rect_icon0'+n+'.png">';
 
+            
+
         }
 
+        
 
 
     </script> 

@@ -90,11 +90,10 @@
             p.setAttribute('align', 'center'); //<p aplign="center"></p>
             //텍스트 생성
             var txt = document.createTextNode('문단입니다');
-            //txt.nodeValue = '문단입니다';
-
+            txt.nodeValue = '문단입니다';
             p.appendChild(txt); //p aplign="center">문단입니다</p>
 
-            // p.textContent = '문단입니다'; //innerText
+            // p.textContent = '문단입니다111'; //innerText
 
             div1.appendChild(p); //div1에 추가
 
@@ -115,7 +114,14 @@
             // input태그만 지우기
             // div1.removeChild(div1.firstElementChild);
             // p태그만 지우기
-            div1.removeChild(div1.lastElementChild);
+            // div1.removeChild(div1.lastElementChild);
+
+
+            
+            //모든 태그 지우기
+            while(div1.children.length != 0) {
+                div1.removeChild(div1.lastElementChild);
+            }
 
         }
         
