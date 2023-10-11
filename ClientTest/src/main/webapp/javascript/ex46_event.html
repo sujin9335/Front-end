@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box { padding: 50px; }
+        #p1 { background-color: tomato;}
+        #p2 { background-color: gold;}
+        #p3 { background-color: cornflowerblue;}
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    
+    <div id="p1" class="box">
+        <div id="p2" class="box">
+            <div id="p3" class="box"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <input type="text" id="txt1">
+
+    <hr>
+
+    <img src="../asset/images/catty01.png" id="cat1">
+
+
+
+    <script>
+
+        //이벤트 버블링(Event Bubbling) 
+        //  vs 이벤트 터널링(Event Tunneling) == 이벤트 캡처링(Capturing)
+
+        const p1 = document.getElementById('p1');
+        const p2 = document.getElementById('p2');
+        const p3 = document.getElementById('p3');
+
+        // document.getElementsByTagName('html')[0].onclick = function(){
+        //     alert('html');
+        // };
+
+        // document.getElementsByTagName('body')[0].onclick = function(){
+        //     alert('body');
+        // };
+
+        // p1.onclick = function() {
+        //     alert('빨강');
+        // };
+        
+        // p2.onclick = function() {
+        //     alert('노랑');
+        //     event.cancelBubble = true;
+        // };
+        
+        // p3.onclick = function() {
+        //     alert('파랑');
+        //     //이벤트 버블링을 여기서 중단해라!!
+        //     //버블링 구조로 부모도 반응을 다 해야되지만 안함
+        //     event.cancelBubble = true;
+        // };
+
+        //버블링구조임 파랑쪽 클릭하면
+        //  파랑p태그 > 노랑p태그 > 빨강p태그 > body태그 > html태그 순으로 올라가면서
+        //  이벤트 걸려있는 곳이 반응을함
+
+
+        //---------------------------------
+
+        //이미지는 포커스를 가질수 없어서 key이벤트를 못가짐(대부분 텍스트박스만)
+        // document.getElementById('cat1').onkeydown = function() { //안됨
+        // window.onkeydown = function() { //윈도우 객체에 걸어야됨
+        //     if (event.keyCode == 37){
+        //         document.getElementById('cat1').width -= 10;
+        //     }else if (event.keyCode == 39){
+        //         document.getElementById('cat1').width += 10;
+        //     }else if (event.keyCode == 65){
+        //         location.href = 'https://google.com';
+        //     }
+        // }//input박스에서도 이 이벤트가 작동하게됨
+
+        //포커스 당사자한테 버블링 중단 걸기
+        // document.getElementById('txt').onkeydown = function() {
+        //     event.cancelBubble = true
+        // }
+
+
+
+
+        //기본 종작
+        //-  이벤트 버블링
+
+        //1. BOM 이벤트
+        //  - 이벤트 버블링
+
+        //2. DOM 이벤트
+        //  - 이벤트 버블링
+        //  - 이벤트 터널링
+
+        
+        //---------------------------------
+        //DOM
+
+        //addEventListener(click, function(), ture);
+        //  true하면 터널링이 되서 위에서 밑으로 내려감 p1태그>p2태그>p3태그
+        p1.addEventListener('click', function(){
+            alert('빨강');
+        }, true);
+        
+        p2.addEventListener('click', function(){
+            alert('노랑');
+        }, true);
+        
+        p3.addEventListener('click', function(){
+            alert('파랑');
+        }, true);
+
+        //버블링
+        p1.addEventListener('click', function(){
+            alert('빨강');
+        });
+        p2.addEventListener('click', function(){
+            alert('노랑');
+        });
+        p3.addEventListener('click', function(){
+            alert('파랑');
+
+            //두개 동일함(과거 브라우저 차이)
+            event.cancelBubble = true;
+            event.stopPropagation(); //이벤트 전파 중지
+        });
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

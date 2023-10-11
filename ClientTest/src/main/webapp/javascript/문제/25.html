@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 500px;
+            height: 500px;
+        }
+        #tbl1 td {
+            border: 1px solid black;
+            
+        }
+        #tbl1 td img {
+            display: block;
+            width: 60px;
+            height: 60px;
+        }
+        #tbl1 .b {
+            background-color: #444;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <table id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="b"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="b"></td>
+            <td></td>
+            <td></td>
+            <td class="b"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="b"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="b"></td>
+        </tr>
+    </table>
+
+
+    <script>
+
+        
+        
+        const list = document.querySelectorAll('#tbl1 td');
+        let index = 0;
+
+        for (let i=0; i<list.length; i++) {
+            list[i].innerText = i;
+            // console.log(list[i].className + "=" + i);
+        }
+
+        // console.log(list[2].className == 'b');
+
+        list[index].bgColor = 'gold';
+
+        window.onkeydown = function() {
+            
+            if(event.keyCode == 37) {
+                clearBackgroundColor();
+                index--;
+                if(((index+1)%5) == 0) {
+                    //방법 2개
+                    // index--;
+                    index++;
+                }else if(list[index].className == 'b'){
+                    index++;
+                }
+
+            }else if (event.keyCode == 39) {
+                // list[index].bgColor = 'white';
+                clearBackgroundColor();
+                index++;
+                if((index%5) == 0) {
+                    //방법 2개
+                    index--;
+                    // index = 0;
+                }else if(list[index].className == 'b'){
+                    index--;
+                }
+
+            }else if (event.keyCode == 40) {
+                // list[index].bgColor = 'white';
+                clearBackgroundColor();
+                index += 5;
+                if(index > 24) {
+                    //방법 2개
+                    index -= 5;
+                    // index = 0;
+                }else if(list[index].className == 'b'){
+                    index -= 5;
+                }
+
+            }else if (event.keyCode == 38) {
+                // list[index].bgColor = 'white';
+                clearBackgroundColor();
+                index -= 5;
+                // console.log(index);
+                if(index < 0) {
+                    //방법 2개
+                    index += 5;
+                    // index = 0;
+                }else if(list[index].className == 'b'){
+                    index += 5;
+                }
+
+            }
+
+            list[index].bgColor = 'gold';
+
+        };
+
+        function clearBackgroundColor() {
+            for(let i=0; i<list.length; i++){
+                list[i].bgColor = 'transparent';
+            }
+        }
+
+
+        
+
+    </script>
+
+
+</body>
+</html>

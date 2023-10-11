@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        //JavaScript > 객체에 프로퍼티를 자유롭게 추가할 수 있다
+
+        const hong = {
+            name: '홍길동'
+        };
+
+        hong.age = 20;
+
+        const now = new Date();
+        console.log(now);
+
+        //내장객체인 Date 같은곳에도 프로퍼티 설정가능
+        now.color = 'yellow'; //사용자 정의 프로퍼티
+        console.log(now.color);
+
+        now.check = function() {
+            console.log('check');
+        };
+        now.check();
+
+        //-----------------------------------------
+
+        //window 객체
+        //- window.open()
+        //- window.close()
+
+        //alert는 윈도우의 객체(window는 생략이 가능해서 안썼던 것)
+        // window.alert();
+        // window.confirm();
+        // window.prompt();
+
+        // window.setTimeout();
+        // window.setInterval();
+
+    
+        //JavaScript의 모든 함수는 자동으로 window 객체의 프로퍼티가 된다
+        //JavaScript의 전역 변수는 자동으로 window 객체의 프로퍼티가 된다
+        //웹 작업관리자(f12) console에 window 입력하면 window의 모든 객체 보임
+        //  그중에 m1이 있음
+        function m1() {
+            alert('m1');
+        }
+
+        window.m1 = m1;
+
+        var a1 = '홍길동'; //전역변수 > 변수(X), 프로퍼티(O)
+        console.log(window.a1);
+
+        var a1 = '아무개'; //프로퍼티 성질임(그냥 변수라고 말함)
+
+        
+        let a2 = '하하하'; //window 프로퍼티(X)
+        const a3 = '호호호'; //window 프로퍼티(X)
+
+
+
+        const obj = {
+            name: '객체',
+            age: 20
+        };
+
+        //제어문
+        //- 객체의 프로퍼티를 탐색하는 루프
+        for (let p in obj) {
+            console.log(p, obj[p]);
+        }
+        for (let p in window) {
+            console.log(p, window[p]);
+        }
+        
+
+
+
+    </script>
+
+
+
+</body>
+</html>

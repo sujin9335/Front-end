@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="list">
+        <img src="../asset/images/catty01.png" alt="">
+        <img src="../asset/images/catty02.png" alt="">
+        <img src="../asset/images/catty03.png" alt="">
+        <img src="../asset/images/catty04.png" alt="">
+        <img src="../asset/images/catty05.png" alt="">
+
+    </div>
+
+
+
+    <script>
+
+        /*
+        
+            JavaScript Core
+
+            변수 선언하기
+            1. var
+                - BOM / DOM / ES6
+                - function-scoped
+                - 제어문(영역 인식 불가능)
+                - 중복 선언 가능
+                - 상수 선언 불가능
+
+            2. let
+                - ES6(ECMAScrip 2015)
+                - block-scoped(함수, 제어문)
+                - 중복 선언 불가능
+
+            3. const 
+                - ES6(ECMAScrip 2015)
+                - block-scoped(함수, 제어문)
+                - 중복 선언 불가능
+                - 상수(final 상수)
+
+
+        */
+
+
+        // var a = 10;
+        // var a = 20;
+        // console.log
+
+        let a = 10; //전역 변수
+
+        function m1() {
+            let b = 20; //지역 변수(m1)
+        }
+
+        m1();
+
+        if (a > 0) {
+            let c = 30; //지역 변수(if)
+            var d = 40;
+        }
+        console.log(d);
+        // console.log(c); // c is no defined
+        
+        // let a = 50; //중복 선언 불가능
+
+        const PI = 3.14;
+        // PI = 5.28; //에러
+
+
+
+        //div 조작
+        //<div> == object
+        const list = document.getElementById('list'); // 태그는 보통 const로
+        // const arr = [];
+
+        //변수에 접속하는거는 상관없음
+        //list.setAttribute('title', '풍선 도움말');
+        //list.innerText = "홍길동";
+
+        for(let i=0; i<list.children.length; i++){//보통 let으로
+            list.children[i].onclick = m2;
+        }
+        function m2() {
+            event.target.width += 10;
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>

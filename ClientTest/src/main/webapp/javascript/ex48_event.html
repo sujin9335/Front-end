@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        #tbl1 td {
+            border: 1px solid black;
+            width: 126px;
+            height: 126px;
+        }
+        #tbl1 td img {
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+  
+    <h1>테이블</h1>
+
+    <table id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+
+        const list = document.querySelectorAll('#tbl1 td');
+
+        console.log(list[1]);
+
+        // for(let i=0; i<list.length; i++) {
+
+        //     list[i].onmousedown = function() { //좌클릭 01이미지
+        //         if(event.buttons == 1){
+        //             let img = document.createElement('img');
+        //             img.setAttribute('src', '../asset/images/rect_icon01.png');
+        //             event.target.appendChild(img);
+        //             console.log(event.target);
+        //         } else if (event.buttons == 2){ //우클릭 02이미지
+        //             let img = document.createElement('img');
+        //             img.setAttribute('src', '../asset/images/rect_icon02.png');
+        //             event.target.appendChild(img);
+        //             // console.log(event.target); 
+        //         } else if (event.buttons == 4) { //가운데 클릭시 지우기
+        //             //클릭한 이미지 삭제
+        //             //- 부모태그.removeChild(자식태그)
+        //             // event.target.removeChild(event.target.firstElementChild);
+        //             // console.log(event.target);
+
+                    
+        //             // event.target.parentElement.removeChild(event.target);
+        //             event.currentTarget.removeChild(event.target);
+        //         }
+
+        //     };
+        // }
+
+        for(let i=0; i<list.length; i++) {
+
+            list[i].onmousedown = function() { //좌클릭 01이미지
+                if(event.buttons == 1){
+
+                    // alert(event.target.nodeName);
+
+                   
+                    if(event.target.nodeName == "TD") { //이미지 없으면 TD, 있으면 IMG 반환
+                        let img = document.createElement('img');
+                        img.setAttribute('src', '../asset/images/rect_icon01.png');
+                        event.target.appendChild(img);
+                    } else {
+                        //기존 이미지 제거
+                        event.currentTarget
+                            .removeChild(event.currentTarget.firstElementChild);
+
+                        let img = document.createElement('img');
+                        img.setAttribute('src', '../asset/images/rect_icon01.png');
+                        event.currentTarget.appendChild(img);
+
+
+                    }
+
+
+
+                } else if (event.buttons == 2){ //우클릭 02이미지
+
+                    if(event.target.nodName == 'TD') {
+                        let img = document.createElement('img');
+                        img.setAttribute('src', '../asset/images/rect_icon02.png');
+                        event.target.appendChild(img);
+                    }else {
+                        event.currentTarget
+                            .removeChild(event.currentTarget.firstElementChild);
+                        let img = document.createElement('img');
+                        img.setAttribute('src', '../asset/images/rect_icon01.png');
+                        event.currentTarget.appendChild(img);
+
+                    }
+
+
+
+
+                } else if (event.buttons == 4) { //가운데 클릭시 지우기
+                    //클릭한 이미지 삭제
+                    //- 부모태그.removeChild(자식태그)
+                    // event.target.removeChild(event.target.firstElementChild);
+                    // console.log(event.target);
+
+                    
+                    // event.target.parentElement.removeChild(event.target);
+                    event.currenttarget.removeChild(event.target);
+                }
+
+            };
+        }
+        
+
+        
+
+        //<body oncontextmenu="return false;">
+        window.oncontextmenu = function() {
+            return false;
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+    <input type="button" value="버튼3" id="btn3">
+    <input type="button" value="버튼4" id="btn4">
+
+
+    <script>
+
+        /*
+        
+            JavaScipt Fucntion
+            - "함수는 1급 객체이다"
+            - "First Citizen"
+            - 함수를 객체처럼 취급한다 > 함수를 값(데이터)으로 사용할 수 있다
+            
+            1. 함수를 변수나 데이터 구조에 담을 수 있다.(저장)
+            2. 함수를 매개변수로 전달할 수 있다.
+            3. 함수를 반환값으로 사용할 수 있다.
+
+
+
+            JavaScript에서 함수를 선언하는 방법
+            1. 함수 선언문
+            2. 함수 표현식(리터럴) == 익명 함수
+
+
+        */
+
+        //함수 선언문
+        // function m1() {
+        //     alert('m1');
+        // }
+        
+        // m1();
+
+
+        //함수 표현식
+        // let f2 = function () { // 함수를 변수에 저장
+        //     alert('익명함수');
+        // };
+
+        // f2();
+
+        //------------------
+
+
+        function m3() {
+            alert('m3');
+        }
+
+        let f3;
+
+        f3 = m3; //함수를 변수에 저장할 수 있다
+
+        //두개다 호출 잘됨
+        // m3();
+        // f3();
+
+
+        //-------------------
+        
+
+        let f4;
+        
+        f4 = function m4() {
+            alert('m4');
+        };
+
+        // f4();
+        // m4(); //호출 안됨 (함수가 따로 선언이 안되면 호출안됨)
+        //그래서 익명으로 씀
+
+
+        //------------------
+
+        //BOM
+
+        //버튼1 태그조작
+        document.getElementById('btn1').onmousedown = p1;
+        //p1의 생성 이유? > btn1의 클릭 이벤트로 전용 함수
+        function p1() {
+            alert('btn1 >' + event.buttons); 
+        }
+
+        //문법적으로 실행은되나 클릭이벤트 목적 함수임
+        // p1(); //클릭이 아닌곳에서 호출?? > 잘못된 사용
+
+
+        
+        //버튼2
+        //1. 가독성 향상: 경로 이벤트 선언과 동시에 함수만들기
+        //2. 가독성 향상: 함수 다른곳에서 사용 불가
+        document.getElementById('btn2').onclick = function () {
+            alert('btn2');
+        };
+
+        //함수 호출하듯이 사용가능
+        // document.getElementById('btn2').onclick();
+
+
+
+        //DOM
+
+        document.getElementById('btn3').addEventListener('click', p3);
+        function p3() {
+            alert()
+        }
+        
+        document.getElementById('btn4')
+                .addEventListener('click', function(){
+            alert()
+        });
+        
+        //----------------------
+
+        function m5() {
+            alert('m5');
+        }
+
+        function m6(aaa) {
+            aaa();
+        }
+
+        // m6(m5);
+        // m6(function() {
+        //     alert('익명');
+        // });
+
+
+        //---------------------
+
+        //함수를 반환값으로 사용
+
+        function m7() {
+            alert('m7');
+        }
+
+        function m8() {
+            return m7;
+        }
+
+        // let temp = m8();
+        // temp();
+        // m8()(); //m8호출 반환값() 실행
+
+
+        //이벤트 설정과 동시에 할일(함수) 설정
+        // setTimeout(function() { 
+        //     alert();
+        // }, 1000);
+
+
+    </script>
+
+
+</body>
+</html>

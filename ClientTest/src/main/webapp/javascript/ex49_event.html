@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        #tbl1 td {
+            border: 1px solid black;
+            width: 60px;
+            height: 60px;
+        }
+        #tbl1 td img {
+            display: block;
+            width: 60px;
+            height: 60px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    
+    <table id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <script>
+
+        const list = document.querySelectorAll("#tbl1 td");
+
+        for(let i=0; i<list.length; i++) {
+
+            
+            list[i].onmouseenter = function() {
+                // event.target.bgColor = 'gold';
+
+                //보조키의 눌림 상태 (해당키누르고 동작하면 true나옴)
+                console.log(event.ctrlKey);
+                // console.log(event.shiftKey);
+
+
+                //경계선 빈곳 가면 이미지 2개방지
+                if(event.currentTarget.children.length == 0) { //자식의 갯수가 0일때
+                    const img = document.createElement('img');
+
+                    if(event.ctrlKey) { //ctr누르면 true
+                        img.setAttribute('src', '../asset/images/rect_icon01.png');
+                        event.currentTarget.appendChild(img);
+                    }else {
+                        img.setAttribute('src', '../asset/images/rect_icon03.png');
+                        event.currentTarget.appendChild(img);
+                    }
+
+                    // console.log(event.target);
+                }
+
+            };
+            
+            list[i].onmouseleave = function() {
+                // event.target.bgColor = 'transparent';
+
+                event.currentTarget.removeChild(event.currentTarget.firstElementChild);
+
+
+            };
+
+        }
+        
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
