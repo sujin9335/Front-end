@@ -111,7 +111,7 @@
         //---------------------------------
         //DOM
 
-        //addEventListener(click, function(), ture);
+        //addEventListener(click, function(), true);
         //  true하면 터널링이 되서 위에서 밑으로 내려감 p1태그>p2태그>p3태그
         p1.addEventListener('click', function(){
             alert('빨강');
@@ -124,6 +124,7 @@
         p3.addEventListener('click', function(){
             alert('파랑');
         }, true);
+
 
         //버블링
         p1.addEventListener('click', function(){

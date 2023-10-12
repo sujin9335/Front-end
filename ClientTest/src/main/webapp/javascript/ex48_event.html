@@ -17,6 +17,8 @@
         }
         #tbl1 td img {
             display: block;
+            width: 100%;
+            height: 100%;
         }
 
 
@@ -105,7 +107,7 @@
 
                 } else if (event.buttons == 2){ //우클릭 02이미지
 
-                    if(event.target.nodName == 'TD') {
+                    if(event.target.nodeName == 'TD') {
                         let img = document.createElement('img');
                         img.setAttribute('src', '../asset/images/rect_icon02.png');
                         event.target.appendChild(img);
@@ -119,8 +121,6 @@
                     }
 
 
-
-
                 } else if (event.buttons == 4) { //가운데 클릭시 지우기
                     //클릭한 이미지 삭제
                     //- 부모태그.removeChild(자식태그)
@@ -129,7 +129,7 @@
 
                     
                     // event.target.parentElement.removeChild(event.target);
-                    event.currenttarget.removeChild(event.target);
+                    event.currentTarget.removeChild(event.target);
                 }
 
             };

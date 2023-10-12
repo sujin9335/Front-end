@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/48055cfc68.js" crossorigin="anonymous"></script>
+    <style>
+        #box1 {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+        }
+
+        .one {font-size: 3rem;}
+        .two {color: cornflowerblue;}
+        .three {text-decoration: underline;}
+
+        body {
+            margin-bottom: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <h1>CSS</h1>
+
+    <input type="button" value="버튼" id="btn1">
+    <hr>
+    <div id="box1">상자</div>
+    <hr>
+    <h1>텍스트</h1>
+
+    <div class="tool">
+        <button type="button" id="btn2"><i class="fa-solid fa-circle-plus"></i></button>
+        <button type="button" id="btn3"><i class="fa-solid fa-circle-minus"></i></button>
+    </div>
+
+    <p id="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa impedit suscipit dolorem voluptatem atque facere laborum perferendis officia reprehenderit placeat. Quibusdam odio quia voluptas sunt temporibus officia aut officiis aliquam.</p>
+
+
+    <script>
+
+        const btn1 = document.getElementById('btn1');
+        const box1 = document.getElementById('box1');
+
+        btn1.addEventListener('click', function(){
+
+            /*
+            
+                JavaScript > CSS 조작
+                1. 모든 태그 > style 속성 제공(인라인 스타일 시트)
+                    > 자바스크립트 style 프로퍼티 제공
+                2. class 조작
+                    - className 프로퍼티
+                    - classList 프로퍼티
+            
+            
+            */ 
+
+            // btn1.value = 'Button';
+            // box1.style = 'color: blue'; //BOM
+            // box1.setAttribute('style', 'color: gold'); //DOM
+
+            //조직적 관리 어려움
+            // box1.innerHTML = '<input>';
+            // box1.style = 'color: blue; font-size: 2rem';
+
+            //style 프로퍼티 > 접근 가능 속성 > 배열 제공
+            // box1.style = 'color: blue';
+            // box1.style.color = 'blue';
+            // box1.style.fontSize = '2rem';
+            // box1.style.backgroundColor = 'gold';
+            
+
+            // box1.style['color'] = 'gold';
+            // box1.style['font-size'] = '2rem';
+            // box1.style['background-image'] = 'url(../asset/images/catty01.png)';
+
+
+            //상자의 현재 너비?
+            // alert(box1.style.width); //값이 없음: CSS준값을 가져오는게아닌 속성값을 가져옴
+            // box1.style.width = '300px';
+            // alert(box1.style.width);
+
+
+            //버튼 클릭 > 상자의 너비 > 현재 너비 + 50px
+            //box1 style속성 값에 직접 너비를 지정 하고
+            //  너비는 px 값이라 parseInt() 처리
+            // boxt1.style.width = parseInt(box1.style.width) + 50 +'px';
+
+
+            //CSS 적용 방식 무관 > 현재 객체에 적용된 모든 CSS속성을 반환
+            const list = window.getComputedStyle(box1);//배열반환
+
+            //이거는 CSS적용 방식에 따라 값이 안나올수있어서 밑에거로 대체됨
+            //alert(box1.style.width);
+
+            alert(list.width);//CSS 적용 값알려줌
+            alert(list.getPropertyValue('width'));
+
+
+
+        });
+
+        // 왜 안될까?
+        // const btn2 = document.getElementById('btn2');
+        // const btn3 = document.getElementById('btn3');
+        // const content = document.getElementById('content');
+
+        // let size = 16;
+
+        // btn2.addEventListener('click', function(){
+        //     size--;
+        //     content.style.fontSize = size + 'px';
+        // });
+        
+        
+        
+        // btn2.addEventListener('click', function(){
+        //     size++;
+        //     content.style.fontSize = size + 'px';
+
+        // });
+
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        const content = document.getElementById('content');
+
+        let size = 16;
+
+
+        btn2.addEventListener('click', function () {
+            // size--;
+            // content.style.fontSize = size + 'px';
+
+            //<p class="one"> 클래스 이름 적용
+            // content.className = 'one';
+
+            //두개 한번에 적용
+            //<p class="one two"> 클래스 이름 적용
+            // content.className = 'one two';
+
+            //배열로 관리: 위에거로 하면 오타나 띄어쓰기 신경써야됨
+            content.classList.add('one');
+            content.classList.add('two');
+
+        });
+
+        btn3.addEventListener('click', function () {
+            // size++;
+            // content.style.fontSize = size + 'px';
+
+            //<p class="two"> //class 이름 변경
+            // content.className = 'two';
+
+
+            //<p class="one two three"> 클래스 이름 적용
+            //앞에 한칸 띄기 안하면 twothree 가됨
+            // content.className += ' three';
+
+            content.classList.add('three');
+            content.classList.remove('two');
+            
+
+        });
+
+    </script>
+
+
+</body>
+</html>

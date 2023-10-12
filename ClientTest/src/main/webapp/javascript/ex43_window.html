@@ -54,7 +54,7 @@
             alert('m1');
         }
 
-        window.m1 = m1;
+        window.m1();//m1 실행
 
         var a1 = '홍길동'; //전역변수 > 변수(X), 프로퍼티(O)
         console.log(window.a1);
@@ -74,12 +74,12 @@
 
         //제어문
         //- 객체의 프로퍼티를 탐색하는 루프
-        for (let p in obj) {
-            console.log(p, obj[p]);
-        }
-        for (let p in window) {
-            console.log(p, window[p]);
-        }
+        // for (let p in obj) {
+        //     console.log(p, obj[p]);
+        // }
+        // for (let p in window) {
+        //     console.log(p, window[p]);
+        // }
         
 
 

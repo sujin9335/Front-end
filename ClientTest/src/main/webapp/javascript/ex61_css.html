@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            border: 1px solid cornflowerblue;
+            width: 250px;
+            height: 188px;
+
+            /* 넘치는 img가리기 */
+            overflow: hidden;
+        }
+        #list {
+            /* border: 5px solid green; */
+            width: 1250px;
+
+            /* img사이 공간 0 */
+            display: flex;
+
+            transition: all 1s;
+        }
+        /* #box:hover #list {
+            transform: translate(-250px, 0px);
+        } */
+
+
+    </style>
+</head>
+<body>
+    
+    <h1>고양이</h1>
+
+    <div id="box">
+        <div id="list">
+            <img src="../asset/images/cat01.jpg" alt="">
+            <img src="../asset/images/cat02.jpg" alt="">
+            <img src="../asset/images/cat03.jpg" alt="">
+            <img src="../asset/images/cat04.jpg" alt="">
+            <img src="../asset/images/cat05.jpg" alt="">
+        </div>
+    </div>
+
+    <hr>
+    <select id="sel1">
+        <option value="0">고양이1</option>
+        <option value="1">고양이2</option>
+        <option value="2">고양이3</option>
+        <option value="3">고양이4</option>
+        <option value="4">고양이5</option>
+    </select>
+
+
+    <script>
+
+         const list = document.getElementById('list');
+         const sel1 = document.getElementById('sel1');
+
+        let dist = 0;
+
+         sel1.addEventListener('change', function() {
+            // alert(sel1.value);
+
+            list.style.transform = `translate(-${sel1.value*250}px, 0px)`;
+
+         });
+
+
+         //숫자키로 이동 
+         window.onkeydown = function() {
+            list.style.transform 
+                = `translate(-${(event.keyCode - 49) * 250}px, 0px)`;
+         };
+
+
+    </script>
+
+
+
+
+</body>
+</html>

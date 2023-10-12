@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu {
+            display: flex;
+            width: 630px;
+            position: fixed;
+            top: 0;
+
+            /* 중앙정렬 세트 */
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+            transform: translate(0px, -100px);
+        }
+
+        /* #menu img:hover {
+            transform: translate(0px, 90px);
+        } */
+
+        #menu img {
+            transition: all .5s;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <nav id="menu">
+        <img src="../asset/images/rect_icon01.png" alt="">
+        <img src="../asset/images/rect_icon02.png" alt="">
+        <img src="../asset/images/rect_icon03.png" alt="">
+        <img src="../asset/images/rect_icon04.png" alt="">
+        <img src="../asset/images/rect_icon05.png" alt="">
+    </nav>
+
+
+    <script>
+
+        const item = document.querySelectorAll('#menu>img');
+        let olditem = null;
+
+        for(let i=0; i<item.length; i++){
+            item[i].onclick = function() {
+
+                if(olditem != null) {
+                    olditem.style.transform = 'translate(0px, 0px)';
+                }
+
+                if(event.target != olditem) { //처음 열리는것
+                    event.target.style.transform = 'translate(0px, 90px)';
+                    olditem = event.target;
+                } else { //다시 눌렀을때 닫힘
+                    event.target.style.transform = 'translate(0px, 00px)';
+                    olditem = event.target;
+                    olditem = null;
+                }
+            };
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
