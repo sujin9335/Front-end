@@ -85,7 +85,7 @@
             }
             function f2() {
                 // alert('따르릉')
-                txt1.value = (new Date()).toLocaleTimeString();
+                txt2.value = (new Date()).toLocaleTimeString();//현재 시간표시
             }
 
 
@@ -104,7 +104,7 @@
 
 
                 //2. 
-                timer = setInterval(f3, 100);
+                timer = setInterval(f3, 1000);
                 //배열에 넣기
                 timerlist.push(timer);
 
@@ -157,7 +157,7 @@
             var m=1;
             var ctimer=0;
 
-
+            
             cat1.onclick = m5;
             function m5() {
                 if(ctimer == 0){

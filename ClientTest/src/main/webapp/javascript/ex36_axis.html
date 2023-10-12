@@ -102,18 +102,29 @@
         //<table> > <tbody> : 테이블의 자식인 티바디는 숨어있다
         // alert(tbl1.children.length);//1개
         
-        var tr=tbl1.firstElementChild.children;
+        var tr=tbl1.firstElementChild.children; // tbl1 > tbody > tr
 
-        for(var i=0; i<tr.length; i++){
-            var td = tr[i].children;
-            for(var j=0; j<td.length; j++){
+        //td 찾는 방법 1
+        // for(var i=0; i<tr.length; i++){
+        //     var td = tr[i].children;
+        //     for(var j=0; j<td.length; j++){
+        //         // td[j].bgColor='gold';
+        //         // td[j].onmouseover = m1;
+        //         // td[j].onmouseout = m2;
+        //         td[j].onmousedown = m3;
+                
+        //     }
+        // }
+
+        //td 찾는 방법 2
+        var td = document.getElementsByTagName('td');
+        for(var j=0; j<td.length; j++){
                 // td[j].bgColor='gold';
                 // td[j].onmouseover = m1;
                 // td[j].onmouseout = m2;
                 td[j].onmousedown = m3;
                 
             }
-        }
 
         function m1() {
             event.target.bgColor = 'gold';

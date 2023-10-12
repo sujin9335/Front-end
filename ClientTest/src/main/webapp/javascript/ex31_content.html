@@ -54,7 +54,7 @@
 
         
         */
-
+        var n=1;
         document.getElementById('btn1').onclick = m1;
         function m1() {
             var div1 = document.getElementById('div1');
@@ -72,9 +72,9 @@
             // div1.textContent = '호호호';
 
             
-            // div1.innerText = '아<b>무</b>개';
-            // div1.innerHTML = '아<b>무</b>개';
-            // div1.textContent = '아<b>무</b>개';
+            // div1.innerText = '아<b>무</b>개'; //b 태그 적용 x
+            // div1.innerHTML = '아<b>무</b>개'; //b 태그 적용 o
+            // div1.textContent = '아<b>무</b>개'; //b 태그 적용 x
             
 
             //동적으로 태그를 생성하기
@@ -82,7 +82,7 @@
             //     div1.innerHTML = '<input type="text">';
             // }
 
-            var n=1;
+            
             div1.innerHTML += '<img src="../asset/images/catty0' + n + '.png" >';
             n++;
             if(n > 9) n = 1;
