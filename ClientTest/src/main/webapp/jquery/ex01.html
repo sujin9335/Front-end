@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="txt1" id="txt1">
+
+
+
+    <!-- 로컬 설치 -->
+    <script src="../asset/js/jquery-1.12.4.js"></script>
+
+
+    <!-- CDN 설치 (자체 서버에서 받아서 씀) --> 
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script> -->
+
+    <script>
+
+        /*
+        
+            jQuery
+            - https://jquery.com
+            - 2006년
+
+            jQuery설치
+            1. 로컬 설치 > 파일 다운로드 + 참조
+            2. CDN 설치 > 원격 파일 설치
+        
+        
+        */
+
+
+        //텍스트 박스
+        //1. BOM
+        document.all.txt1.value = 'BOM';
+
+        //2. DOM > getXXX 메소드 or DOM 트리(Axis) or querySeletorXXX
+        document.getElementById('txt1').value = 'DOM';
+
+        //3. jQuery > jQuery() 함수
+        //- document.querySelectorAll(CSS 선택자): 비슷함  제이쿼리가 원조
+        // jQuery(CSS 선택자);
+        jQuery('#txt1').var('jQuery');
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

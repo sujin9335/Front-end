@@ -40,10 +40,10 @@
         window.onmousedown = function() {
 
             //상자 > position(absolute) > 문서 좌측 상단 기준
-            //clientX, clientY > 문서 좌측 상단 기준
+            //clientX, clientY > 문서 좌측 상단 기준 마우스의 위치
 
             // alert(evnet.clientX);
-
+            //마우스가 box 가운데 위치 150px 절반인 75 보정
             list[index].style.left = event.clientX - 75 + 'px';
             list[index].style.top = event.clientY - 75 + 'px';
             list[index].style.zIndex = zindex;

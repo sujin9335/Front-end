@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //객체
+        const o1 = new Object();
+        const o2 = {};
+
+        o1.name = '홍길동';
+        o1.hello = function() {
+            console.log('hello');
+        };
+        
+        
+        o2.name = '아무개';
+        o2.hello = function() {
+            console.log('안녕');
+        };
+
+
+        //생성자 함수
+        //- 자바의 생성자와 유사
+
+        //자바
+        // class User {
+        //     private String name;
+        //     private int age;
+            
+        //     public User(String name, int age) {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        // }
+
+
+        //자바처럼 만들기
+        //생성자 함수
+        //- 함수명을 파스칼 표기법으로 작성한다
+        function User(name, age) {
+            this.name = name;
+            this.age = age;
+
+            //window.age 이런식으로 window에 넣은거랑 같음
+        }
+
+        //var로 선언한 전역 변수 >  window의 프로퍼티가 됨
+        var color = 'gold';
+
+
+        //*** 생성자 함수는 절대로 일반 함수처럼(밑에) 그냥 호출하면 안된다.
+        // const o12 = User('홍길동', 22);
+        // console.log(o12);
+
+        //***** 생성자 함수는 반드시 new 연산자와 같이 사용해야 한다.
+        //- new : 객체 생성 연산자 == new Object()
+        //이런식으로 호출
+        const o3 = new User('홍길동', 20);
+
+        console.log(o3);
+        console.log(o3.name);
+        console.log(o3.age);
+
+        const o4 = new User('하하하', 21);
+        console.log(o4);
+
+
+        // new > {}
+        const now = new Date();
+        const list = new Array(); //배열(x) > 객체(o)
+
+        //자바스크립트에는 배열이 없음 [방번호]가 아닌 프로퍼티 이름임
+        list[0] = 10; // 0 > 프로퍼티
+        list[2] = 30; // 2 > 프로퍼티
+
+        console.log(list[1]);
+
+        const hong = {};
+        console.log(hong.name);
+
+        // console.log(height);//오류
+
+        
+        //배열이 아닌이유(자바스크립트는 유사배열을 제공해주는것뿐)
+        const arr = {
+            0: '사과',
+            1: '귤',
+            2: '바나나'
+        };
+
+        //[]이걸 써서 호출이 가능
+        //  length 같은 경우는 내부 객체를 만들어준거임
+        console.log(arr[0]);
+
+
+        //내가만든객체
+        const desk = {};
+        //자바스크립트가 제공하는 객체: 객체는 무조건 object이다
+        const today = new Date();
+        const list2 = new Array();
+
+        console.log(typeof desk);   //object
+        console.log(typeof today);  //object
+        console.log(typeof list2);  //object
+
+        //object > 구체적으로 확인 > 생성자 함수명을 확인 (.constructor.name)
+        console.log(today.constructor.name); 
+        console.log(list2.constructor.name);
+
+
+        const list3 = new Array();
+
+        list3[0] = '강아지';
+        list3[1] = '고양이';
+        list3.address = '서울시 강남구';
+        list3.check = function() {
+            alert('하하하');
+        };
+        //이런식으로 넣어도 문제는 없지만 일반구현시에 잘안함
+
+
+
+        const o5 = {
+            name: '홍길동',
+            age: 20,
+            info: function() {
+                //무조건 this 써야됨
+                // console.log(name, age);
+                console.log(this.name, this.age);
+            }
+        };
+
+        o5.info();//this써야됨
+
+
+        const o6 = {
+            name: '호호호',
+            age: 27,
+            info: m1
+        }
+
+        function m1() {
+            console.log(this.name, this.age);
+        }
+
+        //this는 호출된곳의 값 o6를 가져옴
+        o6.info();
+
+        //그냥 m1()을 호출하면 호출한곳 window의 값을 가지고옴
+        m1();
+        window.m1();
+
+        //자바때는 this가 class에 고정되서 class 내부에서 가져오지만
+        //  자바스크립트는 그때그떄 호출하는 곳이 달라서 변함
+        
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
