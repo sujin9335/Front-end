@@ -31,6 +31,7 @@
             //박스 눌렀을때 true
             if(event.target.id == 'box1' && isValid(event)) {
                 isDown = true;
+                //불투명도
                 box1.style.opacity = .3;
             }
             
@@ -41,6 +42,11 @@
             //현재 상자의 크기?
             let w = parseInt(window.getComputedStyle(box1).width);
             let h = parseInt(window.getComputedStyle(box1).height);
+
+            console.log(w);
+            console.log(event.offsetX);
+            console.log(window.getComputedStyle(box1).width);
+            
 
             if(event.offsetX >= (w - 10) && event.offsetX <= w
                 && event.offsetY >= (h - 10) && event.offsetY <= h) {

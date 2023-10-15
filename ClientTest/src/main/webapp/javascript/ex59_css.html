@@ -34,18 +34,18 @@
         box.addEventListener('click', function() {
 
             //옛날 방식
-            // if(timer == 0){
-            //     timer = setInterval(function() {
-            //         box.style.transform = `rotate(${degree}deg)`;
-            //         degree++;
+            if(timer == 0){
+                timer = setInterval(function() {
+                    box.style.transform = `rotate(${degree}deg)`;
+                    degree++;
     
-            //     }, 10);
-            // }else {
-            //     clearInterval(timer);
-            //     timer = 0;
-            // }
+                }, 10);
+            }else {
+                clearInterval(timer);
+                timer = 0;
+            }
 
-            box.style.transform = `rotate(${Math.random() * 3600}deg)`;
+            // box.style.transform = `rotate(${Math.random() * 3600}deg)`;
 
         });
 

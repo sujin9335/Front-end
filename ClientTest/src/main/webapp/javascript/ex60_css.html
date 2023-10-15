@@ -50,7 +50,8 @@
         for(let i=0; i<item.length; i++){
             item[i].onclick = function() {
 
-                if(olditem != null) {
+
+                if(olditem != null) {//옆 다른 메뉴 눌렀을때 사라지는 것
                     olditem.style.transform = 'translate(0px, 0px)';
                 }
 
@@ -58,8 +59,7 @@
                     event.target.style.transform = 'translate(0px, 90px)';
                     olditem = event.target;
                 } else { //다시 눌렀을때 닫힘
-                    event.target.style.transform = 'translate(0px, 00px)';
-                    olditem = event.target;
+                    event.target.style.transform = 'translate(0px, 0px)';
                     olditem = null;
                 }
             };
