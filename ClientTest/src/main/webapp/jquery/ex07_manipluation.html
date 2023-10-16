@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>jQuery 태그 조작</h1>
+
+    <input type="button" value="버튼" id="btn1">
+    <hr>
+    <div id="box"></div>
+    <hr>
+    <input type="text" id="txt1">
+
+
+    <script src="../asset/js/jquery-1.12.4.js"></script>
+    <script>
+
+        var n=1;
+        $('#btn1').click(function() {
+            
+            //콘텐츠 조작
+            //- innerText, textContext
+            //- innerHTML
+            //- value
+
+            //innerText
+            // $('#box').text('홍길동');//쓰기
+            // alert($('#box').text());//읽기
+
+            //innerHTML
+            // $('#box').html('<b>안녕하세요</b>');
+
+            //value
+            // $('#txt1').val('기본값');
+            // alert( $('#txt1').val());
+
+
+            
+            //HTML 속성 조작
+            //BOM
+            //- obj.prop            > 읽기
+            //- obj.prop = value    > 쓰기
+
+            //DOM
+            //- obj.getAttribue('prop')
+            //- obj.getAttribue('prop', value)
+
+
+            //*** attr(), prop() > 마음대로 사용 > 문제 발생 > 서로 교체
+
+
+            //HTML의 속성을 제어
+            //$('#txt1').attr('szie', 50);
+            // alert($('#txt1').attr('szie'));
+
+            //JavaScript의 프로퍼티를 제어
+            // $('#txt1').prop('size', 50);
+            // alert($('#txt1').prop('size'));
+
+
+            //속성 여러개
+            // $('#txt1').attr('size',10)
+            //             .attr('title','입력하세요')
+            //             .attr('maxlegth',5)
+
+            // $('#txt1').attr({
+            //     size: 10,
+            //     title: '입력하세요',
+            //     maxlegth: 5
+            // });
+    
+
+            //태그추가
+            //box.innerHTML = '<img>';
+            // $('#box').html('<img src="../asset/images/catty01.png">');
+
+            //box.innerHTML += '<img>';
+            // $('#box').html($('#box').html() + '<img src="../asset/images/catty01.png">');
+
+            //누적 + 추가
+            //$('#box').append(); > 뒤에 추가
+            //$('#box').prepend(); > 앞에 추가
+
+            // $('#box').append(`<img src="../asset/images/catty0${n}.png">`);
+            // $('#box').prepend(`<img src="../asset/images/catty0${n}.png">`);
+            // n++;
+
+            //CSS 추가
+            // $('#box').append(`<img src="../asset/images/catty0${n}.png">`)
+            // $('#box img:last-child').css('border', '1px solid black');
+            // n++;
+
+
+            //jQuery 함수
+            //1. CSS 선택자 > 태그 검색
+            //2. 자바스크립트 객체 > 형변환
+            //3. HTML 태그 문자열 > 태그 생성
+
+            //append('태그')
+            //prepend('태그')
+
+            //CSS 추가 다른방법
+            // $('#box').append($(`<img src="../asset/images/catty0${n}.png">`)
+            //     .css('border', '1px solid black'));
+
+            
+            //- 부모.append(자식), 자식.appendTo(부모)
+            //- 부모.prepend(자식), 자식.prependTo(부모)
+
+            // $('#box').append('<input>');
+
+            //자식을 중심으로 하여 가독성향상
+            // $('#box').append($('<input>'));
+            // $('<input>').appendTo($('#box'));
+            
+            //두개가 같은 코드지만 자식을 중심으로 써서 깔끔하게 쓸수있다
+            // $('#box').append($('<input>')
+            //                     .attr('size', 10)
+            //                     .css('color', 'blue'));
+            // $('<input>').attr('size', 10)
+            //             .css('color', 'blue')
+            //             .appendTo($('#box'));
+
+
+            
+            //부모.removeChild(자식)
+
+            //본인 스스로 삭제
+            $('input').remove();
+
+
+        });
+
+
+
+
+    </script>
+
+</body>
+</html>

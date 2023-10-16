@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl1 td{ border: 1px solid black; padding: 10px 20px; }
+
+    </style>
+</head>
+<body>
+
+    <h1>테이블</h1>
+
+    <table id="tbl1">
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+    </table>
+
+
+    <script src="../asset/js/jquery-1.12.4.js"></script>
+    <script>
+
+        //<td> x 50개 이벤츠 추가
+        // $('#tbl1 tr').mouseover(function() {
+        //     $(this).css('background-color', 'gold');
+        // });
+        
+        // $('#tbl1 tr').mouseout(function() {
+        //     $(this).css('background-color', 'transparent');
+        // });
+
+        //줄이기
+        // $('#tbl1 tr').mouseover(function() {
+        //     $(this).css('background-color', 'gold');
+        // }).mouseout(function() {
+        //     $(this).css('background-color', 'transparent');
+        // });
+
+
+        $('#tbl1 tr').on({
+           mouseover: function() {
+                // $(this).css('background-color', 'gold');
+                //event.target을 쓰면 tr이 아닌 td가 됨
+                // $(event.target).css('background-color', 'gold');
+
+                //대체 currentTarget or this
+                $(event.currentTarget).css('background-color', 'gold');
+
+           },
+           mouseout: function() {
+                // $(this).css('background-color', 'transparent');
+                // $(event.target).css('background-color', 'transparent');
+                $(event.currentTarget).css('background-color', 'transparent');
+           }
+        });
+
+
+
+
+    </script>
+
+</body>
+</html>
